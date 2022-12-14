@@ -1,15 +1,14 @@
 FROM python:3.8-slim
 
-RUN apt-get update && apt-get install vim
+RUN apt-get update && apt-get install vim -y
 
 WORKDIR /root
 
-COPY .bashrc .
-COPY install-airflow.sh .
-
 RUN pip install ipython
+
+COPY app/. .
 
 ENV AIRFLOW_HOME=~/airflow
 ENV TZ=Europe/Istanbul
 
-CMD airflow standalone
+ENTRYPOINT ["bash", "install-airflow.sh"]

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 export AIRFLOW_HOME=~/airflow
 
 # Install Airflow using the constraints file
