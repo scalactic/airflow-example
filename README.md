@@ -1,5 +1,10 @@
 # Airflow Macros Demo
 An example demo showing the usage of Airflow macros.
+airflow web ui: [localhost:8080](http://localhost:8080)
+
+user: `admin`
+
+password: `admin`
 
 ## How to build ?
 `docker build -t airflow-docker .`
