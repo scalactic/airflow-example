@@ -13,7 +13,8 @@ RUN pip install ipython python-dateutil
 RUN pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 
 COPY app/. .
-COPY app/example airflow/dags
+COPY app/dags airflow/dags/dags
+RUN rm -r dags
 
 RUN cat bashrc >> .bashrc
 
