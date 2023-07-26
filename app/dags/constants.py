@@ -12,7 +12,8 @@ macros = {
     "M5_ED_LAST_MONTH": "{{ execution_date.subtract(months=1).strftime('%Y-%m-%d') }}",
     "M6_NED_LAST_MONTH": "{{ next_execution_date.subtract(months=1).strftime('%Y-%m-%d') }}",
     "M6_NED_LAST_MONTH_V2": "{{ (next_execution_date - macros.dateutil.relativedelta.relativedelta(months=1)).strftime('%Y-%m-%d') }}",
-    "M7_NED_TWO_MONTHS_AGO": "{{ (next_execution_date - macros.dateutil.relativedelta.relativedelta(months=2)).strftime('%Y-%m-%d') }}"
+    "M7_NED_TWO_MONTHS_AGO": "{{ (next_execution_date - macros.dateutil.relativedelta.relativedelta(months=2)).strftime('%Y-%m-%d') }}",
+    "M8_DAG_START_DATE": "{{ dag_run.start_date.strftime('%Y-%m-%d') }}"
 }
 
 

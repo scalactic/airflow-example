@@ -17,3 +17,8 @@ password: `admin`
 
 ## How to stop ?
 `docker stop airflow-docker`
+
+## Example Operators Used in Project
+- BashOperator
+- PythonOperator
+- ShortCircuitOperator
